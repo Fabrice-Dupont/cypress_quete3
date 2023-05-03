@@ -28,6 +28,7 @@ Cypress.Commands.add('postNote', (userToken, title, description, category) => {
     cy.request({
         method: "POST",
         url: "https://practice.expandtesting.com/notes/api/notes",
+        failOnStatusCode: false,
         headers: {
           "x-auth-token":
             userToken,
